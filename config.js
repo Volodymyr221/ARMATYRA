@@ -23,8 +23,8 @@ window.SITE_CONFIG = {
     // Увімкнути/вимкнути надсилання у Telegram
     enabled: true,
     // Токен бота від @BotFather
-    BOT_TOKEN: "PASTE_YOUR_BOT_TOKEN_HERE",
+    BOT_TOKEN: "8679124627:AAER1Tb5ZLFbccyzfsf6I-sIpc0Is_0AbbA",
     // ID чату або каналу, куди надсилати заявки (отримати через @userinfobot)
-    CHAT_ID: "PASTE_YOUR_CHAT_ID_HERE",
+    CHAT_ID: "617871890",
   },
 };
