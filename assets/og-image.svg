@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#F7F7F7"/>
+  <g transform="translate(820,315)">
+    <circle r="220" fill="none" stroke="#E5E5E5" stroke-width="2" stroke-dasharray="2 8"/>
+    <circle r="160" fill="none" stroke="#E5E5E5" stroke-width="2" stroke-dasharray="2 8"/>
+    <circle r="90" fill="#FFE6DC"/>
+    <circle r="90" fill="none" stroke="#FF5A1F" stroke-width="5"/>
+    <circle r="28" fill="#FF5A1F"/>
+  </g>
+  <g transform="translate(90,210)" font-family="Manrope, Arial, sans-serif">
+    <text x="0" y="0" font-size="30" letter-spacing="6" fill="#FF5A1F" font-weight="700">КОМПОЗИТПРОМ</text>
+    <text x="0" y="80" font-size="68" font-weight="800" fill="#111111">Композитна арматура</text>
+    <text x="0" y="158" font-size="68" font-weight="800" fill="#111111">без <tspan fill="#FF5A1F">корозії</tspan></text>
+    <text x="0" y="230" font-size="30" fill="#6B7280">У 9 разів легша за сталь · служить 50+ років</text>
+    <text x="0" y="278" font-size="30" fill="#6B7280">Ціни від 13.50 ₴/м · доставка по Україні</text>
+  </g>
+</svg>
