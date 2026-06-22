@@ -196,78 +196,26 @@
     <section class="section section--muted" id="catalog">
       <div class="container">
         <span class="section__eyebrow">Каталог продукції</span>
-        <h2 class="section__title">Наша продукція</h2>
-        <p class="section__lead">Арматура, опори та сітка для армування фундаментів, стін і огорож.</p>
+        <h2 class="section__title">Повний каталог товарів</h2>
+        <p class="section__lead">Композитна арматура та опори у трьох напрямках. Оберіть категорію й діаметр — і залиште заявку на потрібну позицію.</p>
 
-        <div class="catalog">
-          <article class="product">
-            <span class="product__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FF5A1F" stroke-width="2" stroke-linecap="round"><path d="M5 19 19 5M14 5h5v5"/></svg>
-            </span>
-            <div class="product__body">
-              <h3 class="product__title">Композитна арматура</h3>
-              <p class="product__desc">ø 8–12 мм · бухти та прутки</p>
-            </div>
-            <div class="product__price"><span>від</span><strong>13.50 ₴/м</strong></div>
-          </article>
-
-          <article class="product">
-            <span class="product__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FF5A1F" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
-            </span>
-            <div class="product__body">
-              <h3 class="product__title">Кладочна сітка</h3>
-              <p class="product__desc">50×50 / 100×100 мм</p>
-            </div>
-            <div class="product__price"><span>від</span><strong>24.00 ₴/м²</strong></div>
-          </article>
-
-          <article class="product">
-            <span class="product__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FF5A1F" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M7 8h10M7 14h10"/></svg>
-            </span>
-            <div class="product__body">
-              <h3 class="product__title">Склопластикові опори</h3>
-              <p class="product__desc">для рослин та огорож</p>
-            </div>
-            <div class="product__price"><span>від</span><strong>4.50 ₴/шт</strong></div>
-          </article>
+        <div class="cat-tabs" role="tablist" aria-label="Категорії продукції">
+          <button type="button" class="cat-tab is-active" data-cat="build" role="tab" aria-selected="true">
+            <span class="cat-tab__ic" aria-hidden="true">🏗️</span> Будівництво
+          </button>
+          <button type="button" class="cat-tab" data-cat="agro" role="tab" aria-selected="false">
+            <span class="cat-tab__ic" aria-hidden="true">🌱</span> Агро (рослини)
+          </button>
+          <button type="button" class="cat-tab" data-cat="support" role="tab" aria-selected="false">
+            <span class="cat-tab__ic" aria-hidden="true">🪴</span> Опори для рослин
+          </button>
         </div>
 
-        <!-- ВИБІР ДІАМЕТРА -->
-        <div class="diameter">
-          <h3 class="diameter__title">Підберіть діаметр</h3>
-          <div class="diameter__switch" role="radiogroup" aria-label="Вибір діаметра арматури">
-            <button type="button" class="diameter__opt is-active" role="radio" aria-checked="true" data-d="8">
-              <span class="diameter__dot diameter__dot--8" aria-hidden="true"></span>8 мм
-            </button>
-            <button type="button" class="diameter__opt" role="radio" aria-checked="false" data-d="10">
-              <span class="diameter__dot diameter__dot--10" aria-hidden="true"></span>10 мм
-            </button>
-            <button type="button" class="diameter__opt" role="radio" aria-checked="false" data-d="12">
-              <span class="diameter__dot diameter__dot--12" aria-hidden="true"></span>12 мм
-            </button>
-          </div>
+        <p class="cat-desc" id="cat-desc"></p>
 
-          <div class="diameter__info">
-            <div class="diameter__cell">
-              <span class="diameter__cell-label">Маркування</span>
-              <span class="diameter__cell-val" id="d-mark">АКС-8</span>
-            </div>
-            <div class="diameter__cell">
-              <span class="diameter__cell-label">Замінює сталеву</span>
-              <span class="diameter__cell-val" id="d-replace">12 мм</span>
-            </div>
-            <div class="diameter__cell">
-              <span class="diameter__cell-label">Вага бухти 100 м</span>
-              <span class="diameter__cell-val" id="d-weight">4.5 кг</span>
-            </div>
-            <div class="diameter__cell diameter__cell--accent">
-              <span class="diameter__cell-label">Ціна</span>
-              <span class="diameter__cell-val" id="d-price">13.50 ₴/м</span>
-            </div>
-          </div>
-        </div>
+        <div class="cat-filter" id="cat-filter" aria-label="Фільтр за діаметром"></div>
+
+        <div class="cat-grid" id="cat-grid"></div>
       </div>
     </section>
 
@@ -275,18 +223,18 @@
     <section class="section" id="price">
       <div class="container">
         <span class="section__eyebrow">Прайс</span>
-        <h2 class="section__title">Ціни на арматуру АКС</h2>
-        <p class="section__lead">Базові ціни за погонний метр, бухта 100 м.</p>
+        <h2 class="section__title">Стартові ціни за категоріями</h2>
+        <p class="section__lead">Орієнтовні ціни «від». Повний прайс із усіма діаметрами — у каталозі вище.</p>
 
         <div class="price-table-wrap">
           <table class="price-table">
             <thead>
-              <tr><th>Розмір</th><th>Діаметр</th><th class="ta-r">Ціна</th></tr>
+              <tr><th>Категорія</th><th>Діаметр</th><th class="ta-r">Ціна від</th></tr>
             </thead>
             <tbody>
-              <tr><td>АКС-8</td><td>8 мм</td><td class="ta-r price-val">13.50 ₴</td></tr>
-              <tr><td>АКС-10</td><td>10 мм</td><td class="ta-r price-val">18.90 ₴</td></tr>
-              <tr><td>АКС-12</td><td>12 мм</td><td class="ta-r price-val">26.40 ₴</td></tr>
+              <tr><td>Арматура для будівництва</td><td>4–12 мм</td><td class="ta-r price-val">317 ₴/бухта</td></tr>
+              <tr><td>Арматура Агро (рослини)</td><td>4–12 мм</td><td class="ta-r price-val">349 ₴/бухта</td></tr>
+              <tr><td>Опори для рослин</td><td>6–12 мм</td><td class="ta-r price-val">112,50 ₴/упак.</td></tr>
             </tbody>
           </table>
         </div>
@@ -378,15 +326,22 @@
 
             <div class="field field--row">
               <select name="product" id="f-product" required>
-                <option value="Композитна арматура">Композитна арматура</option>
-                <option value="Кладочна сітка">Кладочна сітка</option>
-                <option value="Склопластикові опори">Склопластикові опори</option>
+                <option value="Арматура для будівництва">Арматура для будівництва</option>
+                <option value="Арматура Агро (рослини)">Арматура Агро (рослини)</option>
+                <option value="Опори для рослин">Опори для рослин</option>
               </select>
               <select name="diameter" id="f-diameter">
+                <option value="4 мм">4 мм</option>
+                <option value="6 мм">6 мм</option>
+                <option value="7 мм">7 мм</option>
                 <option value="8 мм">8 мм</option>
                 <option value="10 мм">10 мм</option>
                 <option value="12 мм">12 мм</option>
               </select>
+            </div>
+
+            <div class="field">
+              <input type="text" name="item" id="f-item" placeholder="Обрана позиція (необов'язково)" readonly />
             </div>
 
             <div class="field">

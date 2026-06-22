@@ -170,6 +170,53 @@ input, select, textarea { font-family: inherit; font-size: 16px; }
 .diameter__cell-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
 .diameter__cell-val { font-family: var(--font-head); font-weight: 700; font-size: 18px; transition: opacity .15s ease; }
 
+/* ============ КАТАЛОГ: ТАБИ / ФІЛЬТР / КАРТКИ ============ */
+.cat-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 18px; }
+.cat-tab {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px;
+  border: 1.5px solid var(--border); background: var(--bg); border-radius: 999px;
+  font-weight: 600; font-size: 14px; color: var(--dark); transition: all .18s ease;
+}
+.section--muted .cat-tab { background: #fff; }
+.cat-tab:hover { border-color: var(--accent); }
+.cat-tab.is-active { background: var(--dark); border-color: var(--dark); color: #fff; }
+.cat-tab__ic { font-size: 15px; }
+
+.cat-desc { color: var(--muted); font-size: 15px; margin-bottom: 16px; max-width: 640px; }
+
+.cat-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.cat-chip {
+  padding: 7px 14px; border: 1px solid var(--border); background: var(--bg);
+  border-radius: 999px; font-weight: 600; font-size: 13px; color: var(--muted); transition: all .15s ease;
+}
+.section--muted .cat-chip { background: #fff; }
+.cat-chip:hover { border-color: var(--accent); color: var(--dark); }
+.cat-chip.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+
+.cat-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.pcard {
+  position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px; display: flex; flex-direction: column; gap: 8px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.section--muted .pcard { background: var(--bg); }
+.pcard:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.pcard__tag {
+  position: absolute; top: 14px; right: 14px; background: var(--accent); color: #fff;
+  font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; letter-spacing: .03em;
+}
+.pcard__head { display: flex; align-items: baseline; gap: 10px; }
+.pcard__d { font-family: var(--font-head); font-weight: 800; font-size: 18px; color: var(--accent); }
+.pcard__len { color: var(--muted); font-size: 14px; font-weight: 600; }
+.pcard__name { font-family: var(--font-head); font-size: 15px; font-weight: 700; line-height: 1.25; }
+.pcard__meta { color: var(--muted); font-size: 12px; margin-top: -2px; }
+.pcard__foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--border); }
+.pcard__price { font-family: var(--font-head); font-weight: 800; font-size: 18px; white-space: nowrap; }
+.pcard__btn { padding: 9px 16px; font-size: 14px; }
+
+.lead-form input[readonly] { color: rgba(255,255,255,.85); cursor: default; }
+.lead-form input.is-filled { border-color: var(--accent); background: #241a14; }
+
 /* ============ ПРАЙС ============ */
 .price-table-wrap { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 8px; overflow-x: auto; }
 .section--muted .price-table-wrap { background: var(--bg); }
@@ -257,6 +304,7 @@ input, select, textarea { font-family: inherit; font-size: 16px; }
   .cards { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .catalog { grid-template-columns: repeat(3, 1fr); }
   .product { flex-wrap: wrap; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .compare { grid-template-columns: 1fr 1fr; gap: 20px; }
   .steps { grid-template-columns: repeat(3, 1fr); }
   .step { border-top: none; border-left: 1px solid var(--border); }
@@ -268,6 +316,7 @@ input, select, textarea { font-family: inherit; font-size: 16px; }
 
 @media (min-width: 1024px) {
   .cards { grid-template-columns: repeat(4, 1fr); }
+  .cat-grid { grid-template-columns: repeat(3, 1fr); }
   .hero__visual { width: 400px; }
   .rebar-svg { width: 400px; }
 }
