@@ -231,7 +231,8 @@ input, select, textarea { font-family: inherit; font-size: 16px; }
 .compare { display: grid; gap: 14px; }
 .compare__col { border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; background: #fff; }
 .section--muted .compare__col { background: var(--bg); }
-.compare__col--win { background: var(--dark); border-color: var(--dark); }
+.compare__col--win,
+.section--muted .compare__col--win { background: var(--dark); border-color: var(--dark); }
 .compare__col--win .compare__name { color: #fff; }
 .compare__name { font-family: var(--font-head); font-size: 19px; font-weight: 700; margin-bottom: 18px; }
 .compare__list { display: grid; gap: 14px; }
